@@ -1,17 +1,25 @@
 package com.ana.olist.controllers;
 
 import com.ana.common.security.libs.payload.MessageResponse;
+import com.ana.olist.entities.FactOrder;
+import com.ana.olist.services.OrdersService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/olist")
 @RequiredArgsConstructor
 public class OrdersController {
+    @Autowired
+    private OrdersService ordersService;
     // ตัวอย่าง GET เพื่อทดสอบ
     @GetMapping("/healthcheck")
     public ResponseEntity<?> doHealthcheck() {
@@ -21,7 +29,8 @@ public class OrdersController {
 
     @PostMapping("/orders")
     public ResponseEntity<?> getOrders(HttpServletRequest request) {
-        return ResponseEntity.ok(new MessageResponse("This is the Olist orders page"));
+        List<FactOrder> orders = ordersService.getAllOrder();
+        return ResponseEntity.ok(orders);
     }
 
 
