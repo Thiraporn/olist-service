@@ -39,7 +39,7 @@
         <!-- custom common libs-->
         <dependency>
             <groupId>com.ana</groupId>
-            <artifactId>common-lib</artifactId>
+            <artifactId>common-libs</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
