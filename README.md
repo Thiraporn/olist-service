@@ -25,13 +25,15 @@ Olist Brazilian E-commerce Dataset
 
 ## 🛠 Tech Stack
 
-- Java / Spring Boot
+- Java 17 
+- Spring Boot 3.5.13
 - Spring Security
 - JWT Authentication
 - Postgresql
 - Maven  
 - REST API
 - Microservice Architecture
+- Kotlin 2.2.20
 
 ---
 
