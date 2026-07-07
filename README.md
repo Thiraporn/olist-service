@@ -35,7 +35,7 @@ Olist Brazilian E-commerce Dataset
 
 ---
 
-## 📌 Notes 
+## 📄 Notes 
 
 This project focuses on:
 
@@ -45,6 +45,17 @@ This project focuses on:
 - Preparation for microservice-based systems
 
 ---
- 
+
+## 🚀 Version
+
+* `0.0.1-SNAPSHOT` → first release (Spring boot and plug in authentication-service)
+* `1.0.0` → v1.0-enable-kotlin (7/7/2026 7.00 p.m.)
+  - upgrade-kotlin 
+  - simple dashboard MoM monthly revenue 
+  - simple dashboard monthly summary revenue
+
+
+
+---
 
    

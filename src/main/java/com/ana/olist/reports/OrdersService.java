@@ -1,4 +1,4 @@
-package com.ana.olist.services;
+package com.ana.olist.reports;
 
 import com.ana.olist.entities.FactOrder;
 import com.ana.olist.repository.FactOrderRepository;
