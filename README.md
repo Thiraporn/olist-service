@@ -29,7 +29,7 @@ Olist Brazilian E-commerce Dataset
 - Spring Boot 3.5.13
 - Spring Security
 - JWT Authentication
-- Postgresql
+- PostgreSQL
 - Maven  
 - REST API
 - Microservice Architecture
@@ -55,6 +55,8 @@ This project focuses on:
   - upgrade-kotlin 
   - simple dashboard MoM monthly revenue 
   - simple dashboard monthly summary revenue
+
+
 
 
 

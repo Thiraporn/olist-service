@@ -1,4 +1,4 @@
-package com.ana.olist.dashboards.sale.DTOs
+package com.ana.olist.dashboards.sale.projection
 
 import java.math.BigDecimal
 
