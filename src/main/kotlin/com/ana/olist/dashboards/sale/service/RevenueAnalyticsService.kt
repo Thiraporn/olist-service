@@ -5,23 +5,21 @@ import com.ana.olist.dashboards.sale.dto.HighestRevenueByProductCategoriesDTO
 import com.ana.olist.dashboards.sale.dto.MonthlyRevenueDTO
 import com.ana.olist.dashboards.sale.dto.MonthlyRevenueSummaryDTO
 import com.ana.olist.dashboards.sale.dto.Top10BestSellingProductsDTO
-import com.ana.olist.dashboards.sale.repository.RevenueRepository
+import com.ana.olist.dashboards.sale.repository.RevenueAnalyticsRepository
 import lombok.RequiredArgsConstructor
 import org.springframework.stereotype.Service
-import java.math.BigDecimal
-import kotlin.String
 
 
 @Service
 @RequiredArgsConstructor
-class RevenueService(
-    private val revenueRepository: RevenueRepository
+class RevenueAnalyticsService(
+    private val revenueAnalyticsRepository: RevenueAnalyticsRepository
 ) {
 
     fun getMonthlyRevenue(): List<MonthlyRevenueDTO> {
 
         val monthlyRevenue: MutableList<MonthlyRevenueDTO> = mutableListOf()
-        revenueRepository.findMonthlyRevenueReport()
+        revenueAnalyticsRepository.findMonthlyRevenueDashboard()
             .forEach {
                 monthlyRevenue.add(
                     MonthlyRevenueDTO(
@@ -40,7 +38,7 @@ class RevenueService(
 
     fun getMonthlyRevenueSummary(): List<MonthlyRevenueSummaryDTO> {
 
-        return revenueRepository.findMonthlyRevenueSummary()
+        return revenueAnalyticsRepository.findMonthlyRevenueSummaryDashboard()
             .map {
                 MonthlyRevenueSummaryDTO(
                     year = it.getYear(),
@@ -52,7 +50,7 @@ class RevenueService(
 
     fun getHighestRevenue(): List<HighestRevenueByProductCategoriesDTO> {
 
-        return revenueRepository.findHighestRevenueByProductCategories()
+        return revenueAnalyticsRepository.findHighestRevenueByProductCategoriesDashboard()
             .map {
                 HighestRevenueByProductCategoriesDTO(
                     productCategoryNameEnglish = it.getProductCategoryNameEnglish(),
@@ -63,7 +61,7 @@ class RevenueService(
     }
     fun getTop10BestSellingProducts(): List<Top10BestSellingProductsDTO> {
 
-        return revenueRepository.findTop10BestSellingProducts()
+        return revenueAnalyticsRepository.findTop10BestSellingProductsDashboard()
             .map {
                 Top10BestSellingProductsDTO(
                     productId =  it.getProductId(),
@@ -74,7 +72,7 @@ class RevenueService(
             }
     }
     fun getAverageOrderValue(): List<AverageOrderValueDTO> {
-        return revenueRepository.findAverageOrderValue()
+        return revenueAnalyticsRepository.findAverageOrderValueDashboard()
             .map {
                 AverageOrderValueDTO(
                     totalRevenue = it.getTotalRevenue(),

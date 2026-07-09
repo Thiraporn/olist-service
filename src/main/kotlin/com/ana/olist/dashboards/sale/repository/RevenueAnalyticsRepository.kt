@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.stereotype.Repository
 @Repository
-interface RevenueRepository : JpaRepository<StgOrder, String> {
+interface RevenueAnalyticsRepository : JpaRepository<StgOrder, String> {
     //1. What is the total revenue generated each month?   รายได้รวมของบริษัทต่อเดือนเป็นเท่าไร
     /*Remarks : Revenue => full payment_value ,order_approved_at => Revenue is recognized when payment is approved.
                payment_installments > 1   ===> start from order_approved_at     sum_rev/payment_installments  in order_approved_at ?
@@ -56,7 +56,7 @@ interface RevenueRepository : JpaRepository<StgOrder, String> {
         """,
         nativeQuery = true
     )
-    fun findMonthlyRevenueReport(): List<MonthlyRevenueProjection>
+    fun findMonthlyRevenueDashboard(): List<MonthlyRevenueProjection>
 
     //2️. How does monthly revenue change over time (Month-over-Month growth)?  ยอดขายเติบโตหรือหดตัวเทียบกับเดือนก่อน (MoM Growth) ช่วยดูว่า ธุรกิจกำลังโตหรือกำลังชะลอ ดู trend โต หรือ ไม่โต
     /* MoM Growth (%) = (Current Month Value − Previous Month Value) / Previous Month Value × 100  */
@@ -79,7 +79,7 @@ interface RevenueRepository : JpaRepository<StgOrder, String> {
     """,
         nativeQuery = true
     )
-    fun findMonthlyRevenueSummary(): List<MonthlyRevenueSummaryProjection>
+    fun findMonthlyRevenueSummaryDashboard(): List<MonthlyRevenueSummaryProjection>
 
 
     //3. Which product categories generate the highest revenue?  หมวดสินค้าที่สร้างรายได้สูงสุดคืออะไร
@@ -101,7 +101,7 @@ interface RevenueRepository : JpaRepository<StgOrder, String> {
           select * from revenue_by_product_cat_sort where rank_total_revenue = 1; 
     """, nativeQuery = true
     )
-    fun findHighestRevenueByProductCategories(): List<HighestRevenueByProductCategoriesProjection>
+    fun findHighestRevenueByProductCategoriesDashboard(): List<HighestRevenueByProductCategoriesProjection>
 
     //4. What are the top 10 best-selling products by number of orders?  สินค้า 10 รายการที่ถูกสั่งซื้อบ่อยที่สุด (จำนวน order มากที่สุด)
     @Query(
@@ -121,7 +121,7 @@ interface RevenueRepository : JpaRepository<StgOrder, String> {
           select * from revenue_by_orderid  where  rank_count_order_id < 11 
     """, nativeQuery = true
     )
-    fun findTop10BestSellingProducts(): List<Top10BestSellingProductsProjection>
+    fun findTop10BestSellingProductsDashboard(): List<Top10BestSellingProductsProjection>
 
 
     //5. What is the Average Order Value (AOV)?      Average Order Value (AOV)  ของร้านค้าเท่าไร    สูตร AOV = total_revenue / total_orders
@@ -140,6 +140,6 @@ interface RevenueRepository : JpaRepository<StgOrder, String> {
                where order_approved_at is not null ;
     """, nativeQuery = true
     )
-    fun findAverageOrderValue(): List<AverageOrderValueProjection>
+    fun findAverageOrderValueDashboard(): List<AverageOrderValueProjection>
 
 }

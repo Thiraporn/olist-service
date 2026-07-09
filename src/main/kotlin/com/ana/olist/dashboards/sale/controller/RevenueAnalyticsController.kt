@@ -5,7 +5,7 @@ import com.ana.olist.dashboards.sale.dto.HighestRevenueByProductCategoriesDTO
 import com.ana.olist.dashboards.sale.dto.MonthlyRevenueDTO
 import com.ana.olist.dashboards.sale.dto.MonthlyRevenueSummaryDTO
 import com.ana.olist.dashboards.sale.dto.Top10BestSellingProductsDTO
-import com.ana.olist.dashboards.sale.service.RevenueService
+import com.ana.olist.dashboards.sale.service.RevenueAnalyticsService
 import lombok.RequiredArgsConstructor
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/api/revenue")
 @RequiredArgsConstructor
-class RevenueController(
-    private val revenueService: RevenueService
+class RevenueAnalyticsController(
+    private val revenueService: RevenueAnalyticsService
 ) {
     @GetMapping("/monthly")
     fun getMonthlyRevenue(): List<MonthlyRevenueDTO> {
