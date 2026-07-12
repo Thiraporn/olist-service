@@ -22,7 +22,7 @@ interface  ProductAnalyticsRepository : JpaRepository<StgOrder, String> {
               group by n.product_category_name_english  
             """
     )
-   fun findAveragePriceOfProductsDashboard(): List<AveragePriceOfProductProjection>
+   fun findAveragePriceOfProductDashboard(): List<AveragePriceOfProductProjection>
 
 
 

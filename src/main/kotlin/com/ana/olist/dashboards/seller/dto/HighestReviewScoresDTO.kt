@@ -4,5 +4,6 @@ import java.math.BigDecimal
 
 data class HighestReviewScoresDTO(
     val sellerId: String,
-    val sellersRevenue: BigDecimal,
+    val countReviews: Int,
+    val reviewScoreBySeller: BigDecimal,
 )

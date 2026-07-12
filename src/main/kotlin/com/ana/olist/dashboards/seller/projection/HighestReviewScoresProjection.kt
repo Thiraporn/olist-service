@@ -4,5 +4,6 @@ import java.math.BigDecimal
 
 interface HighestReviewScoresProjection {
     fun getSellerId(): String
-    fun getSellersRevenue(): BigDecimal
+    fun getCountReviews(): Int
+    fun getReviewScoreBySeller(): BigDecimal
 }
