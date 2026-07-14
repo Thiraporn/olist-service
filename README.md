@@ -37,7 +37,13 @@ Olist Brazilian E-commerce Dataset
 - Mockito 5.4.0
 
 ---
+## 📦 Common Libraries
 
+This project integrates a shared library to centralize reusable components and ensure consistency across services.
+👉 
+<a href="https://github.com/Thiraporn/common-libs"> Common Libs</a>
+
+---
 ## 📄 Notes 
 
 This project focuses on:
@@ -54,8 +60,11 @@ This project focuses on:
 * `0.0.1-SNAPSHOT` → first release (Spring boot and plug in authentication-service)
 * `1.0.0` → v1.0-enable-kotlin (7/7/2026 7.00 p.m.)
   - upgrade-kotlin 
-  - simple dashboard MoM monthly revenue 
-  - simple dashboard monthly summary revenue
+  - simple dashboard revenue analytics
+  - simple dashboard customer analytics
+  - simple dashboard delivery analytics
+  - simple dashboard sale analytics
+  - simple dashboard seller and product analytics
 
 
 
