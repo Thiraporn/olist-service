@@ -9,7 +9,6 @@ import com.ana.olist.dashboards.customer.repository.CustomerAnalyticsRepository
 import lombok.RequiredArgsConstructor
 import org.springframework.stereotype.Service
 
-
 @Service
 @RequiredArgsConstructor
 class CustomerAnalyticsService(
