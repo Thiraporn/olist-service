@@ -33,7 +33,8 @@ Olist Brazilian E-commerce Dataset
 - Maven  
 - REST API
 - Microservice Architecture
-- Kotlin 2.2.20
+- JUnit5
+- Mockito 5.4.0
 
 ---
 
