@@ -58,9 +58,19 @@ This project focuses on:
 
 ---
 
+## 🚧 Ongoing Improvements
+- AWS EC2
+- Docker
+- CI/CD pipeline/Jenkins with GitHub Actions
+- Software
+  <a href="https://github.com/Thiraporn/Development-Documents/tree/main/documents" target="_blank">
+  Development Documentation
+  </a>
+
+---
 ## 🚀 Version
 
-* `0.0.1-SNAPSHOT` → first release (Spring boot and plug in authentication-service)
+* `0.0.1-SNAPSHOT` → first release (Spring boot and plug in authentication-service) 
 * `1.0.0` → v1.0-enable-kotlin (7/7/2026 7.00 p.m.)
   - upgrade-kotlin 
   - simple dashboard revenue analytics
@@ -70,9 +80,28 @@ This project focuses on:
   - simple dashboard seller and product analytics
 
 
-
-
-
 ---
 
-   
+## 🌐 Related Projects,
+
+- Integrated and migrated authentication system to Spring Boot Security with JWT:   
+  <img src="https://img.shields.io/badge/Current-Now Focus-success?style=flat-square"/>
+  <img src="https://skillicons.dev/icons?i=java,spring,mongodb,postman" height="20"/>  
+  <p><a href="https://github.com/Thiraporn/SpringBoot_AuthenWithJWTs" target="_blank">
+  Authentication Repository
+  </a>|<a href="https://springboot-authenjwtswithmongodb.onrender.com" target="_blank">
+  API Health Check
+  </a> </p>
+ 
+  <br/>  
+  <br/> 
+- Data Analysis:  
+  <img src="https://img.shields.io/badge/Current-Now Focus-success?style=flat-square"/>
+  <img src="https://skillicons.dev/icons?i=python,mysql" height="20"/>  
+  <p><a href="https://github.com/Thiraporn/olist_e_commerce" target="_blank">
+  E-commerce Sales Analysis Repository 
+  </a></p>
+  <br/>  
+  <br/> 
+
+---
