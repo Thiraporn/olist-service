@@ -1,4 +1,5 @@
-![status](https://img.shields.io/badge/status-In%20Progress-yellow)
+# Olist Brazilian E-commerce (springboot/kotlin API Servive)
+![status](https://img.shields.io/badge/status-complete-brightgreen)
 
 🚧 This project is currently in progress.
 </br>
@@ -7,7 +8,7 @@
 
 ## 📌 Overview 
 
-**Olist Service** is a springboot microservice project that has been migrated into a   <a  href="https://github.com/Thiraporn/SpringBoot_AuthenWithJWTs" target="_blank">  Spring Boot Security + JWT  </a>  to improve backend development skills, particularly in **microservice integration and service-to-service communication practices**.
+**Olist Service** is a springboot+kotlin microservice project that has been migrated into a   <a  href="https://github.com/Thiraporn/SpringBoot_AuthenWithJWTs" target="_blank">  Spring Boot Security + JWT  </a>  to improve backend development skills, particularly in **microservice integration and service-to-service communication practices**.
 
 The service is part of a <a href="https://github.com/Thiraporn/olist_e_commerce" target="_blank"> Olist e-commerce analytics project </a>,  which focuses on data analysis and insights derived from the same dataset.
 
@@ -29,14 +30,23 @@ Olist Brazilian E-commerce Dataset
 - Spring Boot 3.5.13
 - Spring Security
 - JWT Authentication
-- Postgresql
+- PostgreSQL
 - Maven  
 - REST API
 - Microservice Architecture
-- Kotlin 2.2.20
+- JUnit5
+- Mockito 5.4.0
+- Neon (Free-tier PostgreSQL Database)
+- Render (Free-tier Deployment)
 
 ---
+## 📦 Common Libraries
 
+This project integrates a shared library to centralize reusable components and ensure consistency across services.
+👉 
+<a href="https://github.com/Thiraporn/common-libs"> Common Libs</a>
+
+---
 ## 📄 Notes 
 
 This project focuses on:
@@ -53,8 +63,13 @@ This project focuses on:
 * `0.0.1-SNAPSHOT` → first release (Spring boot and plug in authentication-service)
 * `1.0.0` → v1.0-enable-kotlin (7/7/2026 7.00 p.m.)
   - upgrade-kotlin 
-  - simple dashboard MoM monthly revenue 
-  - simple dashboard monthly summary revenue
+  - simple dashboard revenue analytics
+  - simple dashboard customer analytics
+  - simple dashboard delivery analytics
+  - simple dashboard sale analytics
+  - simple dashboard seller and product analytics
+
+
 
 
 
