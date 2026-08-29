@@ -1,4 +1,5 @@
-![status](https://img.shields.io/badge/status-In%20Progress-yellow)
+# About Olist Brazilian E-commerce ( API With Spring boot)
+![status](https://img.shields.io/badge/status-complete-brightgreen)
 
 🚧 This project is currently in progress.
 </br>
@@ -35,6 +36,8 @@ Olist Brazilian E-commerce Dataset
 - Microservice Architecture
 - JUnit5
 - Mockito 5.4.0
+- Neon (Free-tier PostgreSQL Database)
+- Render (Free-tier Deployment)
 
 ---
 ## 📦 Common Libraries
