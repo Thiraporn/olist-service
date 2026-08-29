@@ -1,4 +1,4 @@
-# About Olist Brazilian E-commerce ( API With Spring boot)
+# Olist Brazilian E-commerce (springboot/kotlin API Servive)
 ![status](https://img.shields.io/badge/status-complete-brightgreen)
 
 🚧 This project is currently in progress.
@@ -8,7 +8,7 @@
 
 ## 📌 Overview 
 
-**Olist Service** is a springboot microservice project that has been migrated into a   <a  href="https://github.com/Thiraporn/SpringBoot_AuthenWithJWTs" target="_blank">  Spring Boot Security + JWT  </a>  to improve backend development skills, particularly in **microservice integration and service-to-service communication practices**.
+**Olist Service** is a springboot+kotlin microservice project that has been migrated into a   <a  href="https://github.com/Thiraporn/SpringBoot_AuthenWithJWTs" target="_blank">  Spring Boot Security + JWT  </a>  to improve backend development skills, particularly in **microservice integration and service-to-service communication practices**.
 
 The service is part of a <a href="https://github.com/Thiraporn/olist_e_commerce" target="_blank"> Olist e-commerce analytics project </a>,  which focuses on data analysis and insights derived from the same dataset.
 
