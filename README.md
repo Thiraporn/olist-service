@@ -1,7 +1,7 @@
 # Olist Brazilian E-commerce (springboot/kotlin API Servive)
 ![status](https://img.shields.io/badge/status-complete-brightgreen)
 
-🚧 This project is currently in progress.
+> 🚧 **Deployment Status:** This project is currently in progress and being prepared for deployment.
 </br>
 
 ---
@@ -65,6 +65,8 @@ This project focuses on:
 ---
 
 ## 🚧 Ongoing Improvements
+
+
 - AWS EC2
 - Docker
 - CI/CD pipeline/Jenkins with GitHub Actions
@@ -109,7 +111,7 @@ The following screenshots demonstrate API testing using **Postman**.
 ![Top 10 Best Selling Products](documents/images/Top10BestSellingProducts.png)
 
 **Business Question : Which cities or states have the highest number of customers?**
-![HighestRankingCustomerCity.png](../olist-service/documents/images/HighestRankingCustomerCity.png)
+![HighestRankingCustomerCity.png](documents/images/HighestRankingCustomerCity.png)
 
 ### 5. Error Handling
 
