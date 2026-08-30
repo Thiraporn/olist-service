@@ -111,7 +111,7 @@ The following screenshots demonstrate API testing using **Postman**.
 ![Top 10 Best Selling Products](documents/images/Top10BestSellingProducts.png)
 
 **Business Question : Which cities or states have the highest number of customers?**
-![HighestRankingCustomerCity.png](../olist-service/documents/images/HighestRankingCustomerCity.png)
+![HighestRankingCustomerCity.png](documents/images/HighestRankingCustomerCity.png)
 
 ### 5. Error Handling
 
