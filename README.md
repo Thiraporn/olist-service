@@ -1,7 +1,7 @@
 # Olist Brazilian E-commerce (springboot/kotlin API Servive)
 ![status](https://img.shields.io/badge/status-complete-brightgreen)
 
-🚧 This project is currently in progress.
+> 🚧 **Deployment Status:** This project is currently in progress and being prepared for deployment.
 </br>
 
 ---
@@ -65,6 +65,8 @@ This project focuses on:
 ---
 
 ## 🚧 Ongoing Improvements
+
+
 - AWS EC2
 - Docker
 - CI/CD pipeline/Jenkins with GitHub Actions
