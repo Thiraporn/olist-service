@@ -18,8 +18,12 @@ Olist Brazilian E-commerce Dataset
 </a>
 ,which provides valuable data for learning, system design, and backend architecture practice. 
 
+---
 
+## 📐 Overall Architecture
+Illustrates the overall system architecture, deployment environment, microservices, shared libraries, and databases.
 
+![High-Level Architecture](documents/images/high-level-architecture.png)
 
 
 ---
@@ -55,6 +59,8 @@ This project focuses on:
 - Secure authentication flow using JWT
 - Clean and scalable architecture
 - Preparation for microservice-based systems
+- Preparation for Test by [Postman](TEST_IN_POSTMAN.md)
+  
 
 ---
 
@@ -80,8 +86,50 @@ This project focuses on:
   - simple dashboard seller and product analytics
 
 
----
+--- 
 
+## 🧪 API Testing
+
+The following screenshots demonstrate API testing using **Postman**.
+
+### 1. Register
+
+![Register API](documents/images/register.png)
+
+### 2. Authentication
+
+![Authentication API](documents/images/authen.png)
+
+### 3. Refresh Token
+
+![Refresh Token API](documents/images/refreshtoken.png)
+
+### 4. Sample API Call
+**Business Question : What are the top 10 best-selling products by number of orders?**
+![Top 10 Best Selling Products](documents/images/Top10BestSellingProducts.png)
+
+**Business Question : Which cities or states have the highest number of customers?**
+![HighestRankingCustomerCity.png](../olist-service/documents/images/HighestRankingCustomerCity.png)
+
+### 5. Error Handling
+
+- **Account Already Exists**
+
+  ![Account Already Exists](documents/images/register_exist_account.png)
+  </br>
+  </br>
+- **Unauthorized**
+
+  ![Unauthorized](documents/images/auhten_wrong_pass_user.png)
+  </br>
+  </br>
+- **Logout or Calling API Without Authentication**
+
+  ![Logout](documents/images/logout.png)
+
+  ![Calling API Without Authentication](documents/images/logout_nerver_authen.png)
+
+--- 
 ## 🌐 Related Projects,
 
 - Integrated and migrated authentication system to Spring Boot Security with JWT:   
