@@ -59,7 +59,7 @@ This project focuses on:
 - Secure authentication flow using JWT
 - Clean and scalable architecture
 - Preparation for microservice-based systems
-- Preparation for Test by [Postman](TEST_IN_POSTMAN.md)
+
   
 
 ---
