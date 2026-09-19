@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/olist")
 public class HealthCheckController {
     @GetMapping("/")
     public String index() {
         return "index";
     }
     // ตัวอย่าง GET เพื่อทดสอบ
-    @GetMapping("/healthcheck")
+    @GetMapping("/olist/healthcheck")
     public ResponseEntity<?> showRegisterPage() {
         return ResponseEntity.ok(new MessageResponse("This is the health-check page : olist-service"));
     }
