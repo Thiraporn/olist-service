@@ -1,8 +1,12 @@
 # Olist Brazilian E-commerce (springboot/kotlin API Servive)
 ![status](https://img.shields.io/badge/status-complete-brightgreen)
 
-> 🚧 **Deployment Status:** This project is currently in progress and being prepared for deployment.
-</br>
+> 🚧 **Deployment Status:**  
+> <a href="https://olist-service.onrender.com" target="_blank">
+👉 First deployed on Render ***Health Check***
+</a>
+<br>
+This project is currently ***in progress*** and being prepared for the next deployment phase on AWS.
 
 ---
 
