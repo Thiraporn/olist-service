@@ -19,12 +19,6 @@ import java.util.List;
 public class OrdersController {
     @Autowired
     private OrdersService ordersService;
-    // ตัวอย่าง GET เพื่อทดสอบ
-    @GetMapping("/healthcheck")
-    public ResponseEntity<?> doHealthcheck() {
-        log.debug("{} {} {}ms","API Health Check Ok!");
-        return ResponseEntity.ok(new MessageResponse("API Health Check Ok!"));
-    }
 
     @PostMapping("/orders")
     public ResponseEntity<?> getOrders(HttpServletRequest request) {
