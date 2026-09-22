@@ -1,12 +1,17 @@
 # Olist Brazilian E-commerce (springboot/kotlin API Servive)
 ![status](https://img.shields.io/badge/status-complete-brightgreen)
 
-> 🚧 **Deployment Status:**  
-> <a href="https://olist-service.onrender.com" target="_blank">
-👉 First deployed on Render ***Health Check***
-</a>
-<br>
-This project is currently ***in progress*** and being prepared for the next deployment phase on AWS.
+[//]: # (> 🚧 **Deployment Status:**  )
+
+[//]: # (> <a href="https://olist-service.onrender.com" target="_blank">)
+
+[//]: # (👉 First deployed on Render ***Health Check***)
+
+[//]: # (</a>)
+
+[//]: # (<br>)
+
+[//]: # (This project is currently ***in progress*** and being prepared for the next deployment phase on AWS.)
 
 ---
 
@@ -47,6 +52,13 @@ Illustrates the overall system architecture, deployment environment, microservic
 - Neon (Free-tier PostgreSQL Database)
 - Render (Free-tier Deployment)
 
+> *Additional technologies used for deployment and demo*
+
+- AWS EC2
+- Docker
+- Jenkins CI/CD Pipeline
+- GitHub Actions
+
 ---
 ## 📦 Common Libraries
 
@@ -71,9 +83,6 @@ This project focuses on:
 ## 🚧 Ongoing Improvements
 
 
-- AWS EC2
-- Docker
-- CI/CD pipeline/Jenkins with GitHub Actions
 - Software
   <a href="https://github.com/Thiraporn/Development-Documents/tree/main/documents" target="_blank">
   Development Documentation
@@ -147,7 +156,81 @@ The following screenshots demonstrate API testing using **Postman**.
   </br>
   ![Lender](documents/images/deploy-render.png)
  
---- 
+---  
+ 
+### 🚀 Deployment & DevOps
+
+**Authen-Service** <a href="https://springboot-authenjwtswithmongodb.onrender.com" target="_blank">
+For Backend API Health Check
+</a>
+
+![Deployment&DevOps_Render_Authen.png](documents/images/Deployment%26DevOps_Render_Authen.png)
+
+
+**Olist-Service**
+
+[//]: # (**Deployment Branch:** [`DEV-AWS-DEPLOY`]&#40;https://github.com/Thiraporn/olist-service/tree/DEV-AWS-DEPLOY&#41;)
+
+> **Demo:** The [`DEV-AWS-DEPLOY`](https://github.com/Thiraporn/olist-service/tree/DEV-AWS-DEPLOY) branch is used to demonstrate the AWS deployment process.
+>
+> This is for training purposes. I stopped the AWS services after completing this project.
+>
+> Please check the [Olist-Service on Render](https://olist-service.onrender.com) for the current health check instead.
+
+**Hello from the browser**
+
+![Deployment&DevOps_AWS_HelloPage.png](documents/images/Deployment%26DevOps_AWS_HelloPage.png)
+
+**Hello from Postman**
+
+![Deployment&DevOps_AWS_HealthCheck.png](documents/images/Deployment%26DevOps_AWS_HealthCheck.png)
+
+**Health Check from Postman**
+
+![Deployment&DevOps_AWS_HealthCheck_Postman.png](documents/images/Deployment%26DevOps_AWS_HealthCheck_Postman.png)
+
+
+**Sample API Calls**
+
+**Business Question: Which sellers generate the highest total revenue?**
+
+![Deployment&DevOps_AWS_sellers_revenue.png](documents/images/Deployment%26DevOps_AWS_sellers_revenue.png)
+
+**Business Question: Which product categories generate the highest revenue?**
+
+![Deployment&DevOps_AWS_highest-revenue-category.png](documents/images/Deployment%26DevOps_AWS_highest-revenue-category.png)
+
+---
+
+[//]: # (<a href="https://github.com/Thiraporn/Development-Documents/tree/main/documents" target="_blank">)
+
+[//]: # (  Development Documentation)
+
+[//]: # (</a>)
+
+
+### 🚀 Jenkins Pipeline & Deploy Logs
+ 
+> **Deploy Configurations:** The [Development Documentation](https://github.com/Thiraporn/Development-Documents/tree/main/documents/Deploy_Configurations) demonstrates the AWS deployment process in the section below.
+
+Here is an example of the Jenkins Pipeline:
+![Deploy_Configurations.png](documents/images/Deploy_Configurations.png)
+
+![Deployment&DevOps_AWS_Jenkins.png](documents/images/Deployment%26DevOps_AWS_Jenkins.png)
+
+![Deployment&DevOps_AWS_Pipeline.png](documents/images/Deployment%26DevOps_AWS_Pipeline.png)
+
+ 
+Here is an example of the logs when the Jenkins Pipeline completes successfully:
+
+![Deployment&DevOps_AWS_DeployLogs1.png](documents/images/Deployment%26DevOps_AWS_DeployLogs1.png)
+
+![Deployment&DevOps_AWS_DeployLogs2.png](documents/images/Deployment%26DevOps_AWS_DeployLogs2.png)
+
+---
+ 
+
+
 ## 🌐 Related Projects,
 
 - Integrated and migrated authentication system to Spring Boot Security with JWT:   
