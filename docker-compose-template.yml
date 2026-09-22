@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dotnetcore-api:
+    image: [account-name]/olist-service:v0.1
+    ports:
+      - "8081:8080"  # Map port 8080 inside the container to port 8081 on your host
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"  # Optionally set the environment
+    restart: always  # Ensure the service restarts if it crashes
+
