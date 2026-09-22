@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id')  // Reference to DockerHub credentials in Jenkins
+        GITHUB_CREDENTIALS = credentials('github-packages-credentials-id')//Reference to github credentials
         DOCKERHUB_REPO = 'futureskilldockerhub/olist-service'           // DockerHub repository
         IMAGE_VERSION_FILE = 'VERSION'                                    // File that contains the current version
     }
@@ -24,12 +25,18 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+       stage('Build Docker Image') {
             steps {
                 script {
                     def newVersion = readFile(IMAGE_VERSION_FILE).trim()
                     // Build the Docker image and tag it with the new version
-                    sh "docker build -t ${DOCKERHUB_REPO}:${newVersion} ."
+                    //sh "docker build -t ${DOCKERHUB_REPO}:${newVersion} ."
+                    sh """
+                        docker build \
+                            --build-arg GITHUB_USERNAME="${GITHUB_CREDENTIALS_USR}" \
+                            --build-arg GITHUB_TOKEN="${GITHUB_CREDENTIALS_PSW}" \
+                            -t ${DOCKERHUB_REPO}:${newVersion} .
+                    """
                 }
             }
         }
