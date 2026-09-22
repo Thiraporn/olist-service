@@ -31,7 +31,9 @@ services:
       IMAGE_VERSION: ${IMAGE_VERSION}
       PORT: ${PORT}
 
+#    volumes:
+#      - ./config/keys/public.pem:/app/config/keys/public.pem:ro
     volumes:
-      - ./config/keys/public.pem:/app/config/keys/public.pem:ro
+      - /opt/olist-service/config/keys/public.pem:/app/config/keys/public.pem:ro
 
     restart: always
