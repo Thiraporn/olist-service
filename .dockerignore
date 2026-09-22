@@ -1,6 +1,7 @@
 **/.classpath
 **/.dockerignore
 **/.env
+**/olist-service.env
 **/.git
 **/.gitignore
 **/.project

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  olist-service:
+    image: futureskilldockerhub/olist-service:${IMAGE_VERSION}
+    container_name: olist-service
+
+    ports:
+      - "8081:8080"
+      # EC2
+      # 18.143.102.112:8081
+      #       ↓
+      # Docker Container :8080
+      #       ↓
+      # Spring Boot :8080
+
+    environment:
+      CORE_ENVIRONMENT: "Development"
+      AUTHEN_SERVICE_URL: ${AUTHEN_SERVICE_URL}
+      OLIST_SERVICE_URL: ${OLIST_SERVICE_URL}
+
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      GITHUB_USERNAME: ${GITHUB_USERNAME}
+
+      JWT_PUBLIC_KEY_PATH: ${JWT_PUBLIC_KEY_PATH}
+
+      PG_DATABASE_URI: ${PG_DATABASE_URI}
+      PG_DATABASE_USER_NAME: ${PG_DATABASE_USER_NAME}
+      PG_DATABASE_PASSWORD: ${PG_DATABASE_PASSWORD}
+
+      IMAGE_VERSION: ${IMAGE_VERSION}
+      PORT: ${PORT}
+
+    volumes:
+      - ./config/keys/public.pem:/app/config/keys/public.pem:ro
+
+    restart: always
