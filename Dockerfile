@@ -1,22 +1,30 @@
-FROM eclipse-temurin:17-jdk
+# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-ARG GITHUB_USERNAME
-ARG GITHUB_TOKEN
-
+# This stage is used when running from VS in fast mode (Default for Debug configuration)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
 WORKDIR /app
-
-COPY . .
-
-RUN apt-get update && apt-get install -y maven
-
-RUN echo "AUTHEN_COMMONLIBS>>" $GITHUB_USERNAME
-RUN test -n "$GITHUB_TOKEN" && echo "TOKEN_EXISTS"
-
-RUN mkdir -p /root/.m2
-RUN cp .m2/settings.xml /root/.m2/settings.xml
-
-RUN mvn --settings /root/.m2/settings.xml clean package -DskipTests
-
 EXPOSE 8080
+EXPOSE 8081
 
-CMD ["java","-jar","target/olist-service-1.0.0.jar"]
+
+# This stage is used to build the service project
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["SimpleAPI.csproj", "."]
+RUN dotnet restore "./SimpleAPI.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "./SimpleAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# This stage is used to publish the service project to be copied to the final stage
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./SimpleAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "SimpleAPI.dll"]
