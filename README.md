@@ -48,18 +48,16 @@ Illustrates the overall system architecture, deployment environment, microservic
 - REST API
 - Microservice Architecture
 - JUnit5
-- Mockito 5.4.0 
+- Mockito 5.4.0
 - Neon (Free-tier PostgreSQL Database)
 - Render (Free-tier Deployment)
 
-> *Additional technologies used for deployment and demo on AWS*
+> *Additional technologies used for deployment and demo*
 
 - AWS EC2
 - Docker
-- Docker Hub
 - Jenkins CI/CD Pipeline
 - GitHub Actions
-
 
 ---
 ## 📦 Common Libraries
@@ -215,9 +213,8 @@ For Backend API Health Check
  
 > **Deploy Configurations:** The [Development Documentation](https://github.com/Thiraporn/Development-Documents/tree/main/documents/Deploy_Configurations) demonstrates the AWS deployment process in the section below.
 
-![Deploy_Configurations.png](documents/images/Deploy_Configurations.png)
-
 Here is an example of the Jenkins Pipeline:
+![Deploy_Configurations.png](documents/images/Deploy_Configurations.png)
 
 ![Deployment&DevOps_AWS_Jenkins.png](documents/images/Deployment%26DevOps_AWS_Jenkins.png)
 
