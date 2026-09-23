@@ -59,6 +59,7 @@ pipeline {
                    def newVersion = readFile(IMAGE_VERSION_FILE).trim()
                     sh """
                     docker-compose down
+                    docker rm -f olist-service || true
                     sed -i 's|image: .*|image: ${DOCKERHUB_REPO}:${newVersion}|' docker-compose.yml
                     docker-compose up -d
                     """
