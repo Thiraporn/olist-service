@@ -75,7 +75,6 @@ pipeline {
                 def newVersion = readFile(IMAGE_VERSION_FILE).trim()
                 env.NEW_VERSION = newVersion
             }
-
             sh '''
                 cd /opt/olist-service
 
