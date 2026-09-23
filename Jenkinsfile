@@ -52,28 +52,43 @@ pipeline {
             }
         }
 
-        stage('Deploy with Docker Compose') {
+      /*  stage('Deploy with Docker Compose') {
             steps {
                 script {
                     // Run docker-compose to deploy the application
-                  /*   def newVersion = readFile(IMAGE_VERSION_FILE).trim()
+                   def newVersion = readFile(IMAGE_VERSION_FILE).trim()
                     sh """
                     docker-compose down
                     sed -i 's|image: .*|image: ${DOCKERHUB_REPO}:${newVersion}|' docker-compose.yml
                     docker-compose up -d
-                    """ */
-                    sh """
-                        cd /opt/olist-service
-                        docker rm -f olist-service || true
-                        sed -i 's|image: .*|image: ${DOCKERHUB_REPO}:${newVersion}|' docker-compose.yml
-                        docker compose up -d
                     """
                 }
             }
         }
+    }*/
+
+
+    stage('Deploy with Docker Compose') {
+       // Run docker-compose to deploy the application
+        steps {
+            script {
+                def newVersion = readFile(IMAGE_VERSION_FILE).trim()
+                env.NEW_VERSION = newVersion
+            }
+
+            sh '''
+                cd /opt/olist-service
+
+                docker-compose down || true
+
+                docker rm -f olist-service || true
+
+                sed -i "s|image: .*|image: ${DOCKERHUB_REPO}:${NEW_VERSION}|" docker-compose.yml
+
+                docker compose up -d
+            '''
+        }
     }
-
-
 
     post {
         success {
