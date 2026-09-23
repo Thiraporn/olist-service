@@ -56,16 +56,24 @@ pipeline {
             steps {
                 script {
                     // Run docker-compose to deploy the application
-                    def newVersion = readFile(IMAGE_VERSION_FILE).trim()
+                  /*   def newVersion = readFile(IMAGE_VERSION_FILE).trim()
                     sh """
                     docker-compose down
                     sed -i 's|image: .*|image: ${DOCKERHUB_REPO}:${newVersion}|' docker-compose.yml
                     docker-compose up -d
+                    """ */
+                    sh """
+                        cd /opt/olist-service
+                        docker rm -f olist-service || true
+                        sed -i 's|image: .*|image: ${DOCKERHUB_REPO}:${newVersion}|' docker-compose.yml
+                        docker compose up -d
                     """
                 }
             }
         }
     }
+
+
 
     post {
         success {
