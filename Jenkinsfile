@@ -52,7 +52,7 @@ pipeline {
             }
         }
 
-      /*  stage('Deploy with Docker Compose') {
+        stage('Deploy with Docker Compose') {
             steps {
                 script {
                     // Run docker-compose to deploy the application
@@ -65,10 +65,10 @@ pipeline {
                 }
             }
         }
-    }*/
+    }
 
 
-    stage('Deploy with Docker Compose') {
+   /*  stage('Deploy with Docker Compose') {
        // Run docker-compose to deploy the application
         steps {
             script {
@@ -87,7 +87,7 @@ pipeline {
                 docker compose up -d
             '''
         }
-    }
+    } */
 
     post {
         success {
